@@ -1,4 +1,4 @@
-#CGT 390 Individual Project
+# CGT 390 Individual Project
 
 This is my individual project for CGT 390 which I intend to make a simple but dynamic portfolio page using React.
 
