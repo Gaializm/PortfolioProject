@@ -1,0 +1,56 @@
+/* Contact Container */
+.contact {
+    background: var(--button-background-color); /* Dark indigo background */
+    color: var(--button-text-color); /* Light text color */
+    padding: 2rem; /* Add padding */
+    border-radius: var(--border-radius); /* Rounded corners */
+    margin: 2rem 0; /* Add some margin */
+}
+
+    /* Contact Heading */
+    .contact h2 {
+        color: #e8f8faff;
+        font-family: var(--font-family);
+        font-size: 1.75rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem; /* Space below the heading */
+    }
+
+/* Contact Info Container */
+.contact-info {
+    color: #e8f8faff;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 1rem; /* Space between items */
+}
+
+/* Contact Item (Email/Phone) */
+.contact-item {
+    color: #e8f8faff;
+    left: 100px;
+    display: flex;
+    gap: 0.75rem; /* Space between icon and text */
+}
+
+    .contact-item p {
+        color: #e8f8faff;
+    }
+
+    /* Contact Icons */
+    .contact-item img {
+        width: 24px; /* Small icon size */
+        height: 24px;
+    }
+
+    /* Contact Links */
+    .contact-item a {
+        color: var(--link-color); /* Light blue for links */
+        text-decoration: none; /* Remove underline */
+        font-family: var(--font-family);
+        font-size: 1rem;
+        transition: color 0.3s;
+    }
+
+        .contact-item a:hover {
+            color: #e8f8faff;
+        }

@@ -1,0 +1,42 @@
+/* Testimonial Card Container */
+.quote-cards {
+    background: var(--third-background-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 400px; 
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+    .quote-cards:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+/* Testimonial Icon */
+.quote-card_icon {
+    width: 64px;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Testimonial Text */
+.quote-card_content p {
+    font-family: var(--font-family);
+    font-size: 1rem;
+    color: var(--text-color);
+    font-style: italic; /* Italicize quotes */
+    margin-bottom: 1rem;
+}
+
+/* Testimonial Author */
+.quote-card_content h3 {
+    font-family: var(--font-family);
+    font-size: 0.9rem;
+    color: var(--text-color);
+    text-align: right; /* Align author name to the right */
+}

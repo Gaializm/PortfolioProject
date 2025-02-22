@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+    /* CSS HEX */
+    --lilac: #c7a7c8ff;
+    --azure-web: #e8f8faff;
+    --uranian-blue: #a5d0f3ff;
+    --maya-blue: #6cbeedff;
+    --international-klein-blue: #1929b3ff;
+    /* color scheme */
+    --primary-background-color: #e8f8faff;
+    --secondary-backrgound-color: #646cff;
+    --third-background-color: #ffffff;
+    --text-color: #1929b3ff;
+    --dark-text-color: #ffffff;
+    --button-background-color: #1929b3ff;
+    --button-text-color: #e8f8faff;
+    --button-hover-background-color: #c7a7c8ff;
+    --button-hover-text-color: #e8f8faff;
+    --link-color: #6cbeedff;
+    --link-hover-color: var(--text-color);
+    /* font */
+    /* font-weight between 200 & 1000 */
+    --font-family: "Mulish", serif;
+    /* break points 
+    --mobile: 768px;
+    --tablet: 1024px;
+    /* border */
+    --border-radius: 8px;
+    --border-color: #e0e0e0;
+    /* shadow */
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --success-color: #2ecc71;
+    --error-color: #e74c3c;
+}
