@@ -9,16 +9,16 @@ body {
     --international-klein-blue: #1929b3ff;
     /* color scheme */
     --primary-background-color: #e8f8faff;
-    --secondary-backrgound-color: #646cff;
-    --third-background-color: #ffffff;
+    --secondary-background-color: #1929b3ff;
+    --third-background-color: #ffffffff;
     --text-color: #1929b3ff;
     --dark-text-color: #ffffff;
-    --button-background-color: #1929b3ff;
-    --button-text-color: #e8f8faff;
-    --button-hover-background-color: #c7a7c8ff;
+    --button-background-color: #6cbeedff;
+    --button-text-color: #1929b3ff;
+    --button-hover-background-color: #6cbeedff;
     --button-hover-text-color: #e8f8faff;
-    --link-color: #6cbeedff;
-    --link-hover-color: var(--text-color);
+    --link-color: #e8f8faff;
+    --link-hover-color: #c7a7c8ff;
     /* font */
     /* font-weight between 200 & 1000 */
     --font-family: "Mulish", serif;

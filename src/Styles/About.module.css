@@ -1,0 +1,44 @@
+/* About Container */
+.about {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Arrange children in a row */
+    align-items: center; /* Vertically center the content */
+    gap: 2rem; /* Add spacing between image and content */
+    max-width: 1200px; /* Limit the width of the About section */
+    margin: 0 auto; /* Center the About section horizontally */
+    padding: 2rem; /* Add padding for spacing */
+}
+
+/* About Image */
+.about_image {
+    flex: 1; /* Allow the image to take up available space */
+    max-width: 400px; /* Limit the image width */
+}
+
+    .about_image img {
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 10px; /* Optional: Add rounded corners */
+        object-fit: cover; /* Ensures the image covers the area */
+    }
+
+/* About Content */
+.about_content {
+    flex: 2; /* Allow the content to take up more space */
+}
+
+    .about_content h1 {
+        font-family: var(--font-family);
+        font-size: 4.5rem;
+        font-weight: 600;
+        color: var(--text-color);
+        margin-bottom: 3rem; /* Add spacing below the heading */
+    }
+
+    .about_content p {
+        font-family: var(--font-family);
+        font-size: 1rem;
+        color: var(--text-color);
+        opacity: 0.8;
+        line-height: 1.6; /* Improve readability */
+    }

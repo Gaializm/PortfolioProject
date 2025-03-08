@@ -6,7 +6,7 @@
     padding: 1.5rem;
     box-shadow: var(--box-shadow);
     transition: transform 0.2s, box-shadow 0.2s;
-    width: 400px; 
+    width: 300px; 
     margin: 1rem;
     display: flex;
     flex-direction: row;
@@ -19,7 +19,7 @@
 
 /* Testimonial Icon */
 .quote-card_icon {
-    width: 64px;
+    width: 32px;
     font-size: 2rem;
     margin-bottom: 1rem;
 }

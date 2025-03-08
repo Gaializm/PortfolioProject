@@ -52,5 +52,5 @@
     }
 
         .contact-item a:hover {
-            color: #e8f8faff;
+            color: var(--link-hover-color);
         }

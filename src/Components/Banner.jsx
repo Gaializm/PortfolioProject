@@ -1,4 +1,4 @@
-import bannerImage from '../assets/placeholderBanner.png';
+import bannerImage from '../assets/banner.png';
 import style from '../styles/Banner.module.css';
 
 const Banner = ({formStatus, displayForm }) => {

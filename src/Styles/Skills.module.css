@@ -9,17 +9,19 @@
     box-shadow: var(--box-shadow);
     width: 200px; /* Fixed width for each card */
     margin-right: 1rem; /* Space between cards */
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .skill-cards:hover {
-        transform: translateY(-5px); /* Lift card on hover */
+        transform: translateY(-2px); /* Lift card on hover */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
  }
 
 /* Skill Card Image */
 .skill-card_image img {
-    width: 64px; /* Adjust icon size */
-    height: 64px;
+    width: 44px; /* Adjust icon size */
+    height: 44px;
     margin-bottom: 1rem;
 }
 

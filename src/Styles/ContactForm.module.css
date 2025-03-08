@@ -1,0 +1,67 @@
+/* Contact Form Container */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Increased spacing between form fields */
+    width: 100%;
+    max-width: 350px; /* Adjusted width */
+    margin: 0 auto; /* Center the form horizontally */
+    padding-top: 40px; /* Added padding to avoid overlap with close button */
+}
+
+    /* Form Fields */
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 12px; /* Increased padding */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        box-sizing: border-box; /* Ensure padding doesn't affect width */
+    }
+
+    .contact-form textarea {
+        resize: vertical; /* Allow vertical resizing */
+        min-height: 120px; /* Increased minimum height */
+    }
+
+    /* Character Count */
+    .contact-form p {
+        font-size: 14px;
+        color: #666;
+        text-align: right;
+        margin: 5px 0 0;
+    }
+
+    /* Submit Button */
+    .contact-form button {
+        width: 100%;
+        padding: 12px; /* Increased padding */
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px; /* Increased space above the button */
+    }
+
+        .contact-form button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+    /* Error and Success Messages */
+    .contact-form .error {
+        color: red;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .contact-form .success {
+        color: green;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 10px;
+    }

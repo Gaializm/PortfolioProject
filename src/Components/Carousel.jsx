@@ -1,93 +1,66 @@
-import React, { useState, useEffect } from 'react';
-import image from '../assets/outlined-placeholder-blank.svg';
-import Skill from './Skill';
+import React, { useState } from 'react';
 import style from '../Styles/Carousel.module.css';
 
-const Carousel = () => {
-    const mySkills = [
-        {
-            id: 1,
-            icon: image,
-            name: 'Programming',
-            description: 'Im able to program in multiple languages',
-        },
-        {
-            id: 2,
-            icon: image,
-            name: 'Programming',
-            description: 'Im able to program in multiple languages',
-        },
-        {
-            id: 3,
-            icon: image,
-            name: 'Programming',
-            description: 'Im able to program in multiple languages',
-        },
-        {
-            id: 4,
-            icon: image,
-            name: 'Programming',
-            description: 'Im able to program in multiple languages',
-        },
-        {
-            id: 5,
-            icon: image,
-            name: 'Programming',
-            description: 'Im able to program in multiple languages',
-        },
-    ];
+const Carousel = ({ children, itemWidth }) => {
+    // Convert children to an array (in case it's not already)
+    const items = React.Children.toArray(children);
 
-    // Duplicate the first and last cards for seamless looping
-    const duplicatedSkills = [mySkills[mySkills.length - 1], ...mySkills, mySkills[0]];
-
-    const [currentIndex, setCurrentIndex] = useState(1); // Start at the first real card
-    const [isTransitioning, setIsTransitioning] = useState(true);
+    const [currentIndex, setCurrentIndex] = useState(items.length/2); // Start around the middle of the array
 
     const handleNext = () => {
-        setCurrentIndex((prevIndex) => prevIndex + 1);
+        setCurrentIndex((prevIndex) => Math.min(prevIndex + 1, items.length - 1));
     };
 
     const handlePrev = () => {
-        setCurrentIndex((prevIndex) => prevIndex - 1);
+        setCurrentIndex((prevIndex) => Math.max(prevIndex - 1, 0));
     };
 
-    // Handle the transition when reaching the end
-    useEffect(() => {
-        if (currentIndex === duplicatedSkills.length - 1) {
-            // If at the last duplicated card, instantly reset to the real last card
-            setTimeout(() => {
-                setIsTransitioning(false);
-                setCurrentIndex(1);
-            }, 300); // Match the transition duration
-        } else if (currentIndex === 0) {
-            // If at the first duplicated card, instantly reset to the real first card
-            setTimeout(() => {
-                setIsTransitioning(false);
-                setCurrentIndex(duplicatedSkills.length - 2);
-            }, 300); // Match the transition duration
-        } else {
-            setIsTransitioning(true);
-        }
-    }, [currentIndex]);
+    // Disable next button if at the last item
+    const isNextDisabled = currentIndex === items.length - 1;
+    // Disable prev button if at the first item
+    const isPrevDisabled = currentIndex === 1;
+
+    // Calculate the translateX value to center the active item
+    const translateX = -currentIndex * itemWidth + (window.innerWidth / 2 - itemWidth / 2);
 
     return (
-        <div className={style["carousel-container"]}>
-            <div
-                className={style["carousel"]}
-                style={{
-                    transform: `translateX(-${currentIndex * 70}px)`,
-                    transition: isTransitioning ? 'transform 0.3s ease-in-out' : 'none',
-                }}
-            >
-                {duplicatedSkills.map((skill, index) => (
-                    <Skill key={index} icon={skill.icon} name={skill.name} description={skill.description} />
-                ))}
+        <div className={style["carousel-wrapper"]}>
+            <div className={style["carousel-container"]}>
+                <div
+                    className={style["carousel"]}
+                    style={{
+                        transform: `translateX(${translateX}px)`,
+                        transition: 'transform 0.3s ease-in-out',
+                    }}
+                >
+                    {items.map((item, index) => (
+                        <div
+                            key={index}
+                            style={{
+                                width: `${itemWidth}px`,
+                                flexShrink: 0,
+                                transform: index === currentIndex ? 'scale(1.1)' : 'scale(0.9)', // Highlight the active item
+                                transition: 'transform 0.3s ease-in-out',
+                            }}
+                        >
+                            {item}
+                        </div>
+                    ))}
+                </div>
             </div>
             <div className={style["carousel-controls"]}>
-                <button onClick={handlePrev} className={style["carousel-button"]}>
+                <button
+                    onClick={handlePrev}
+                    className={style["carousel-button"]}
+                    disabled={isPrevDisabled}
+                >
                     &lt; {/* Left arrow */}
                 </button>
-                <button onClick={handleNext} className={style["carousel-button"]}>
+                <button
+                    onClick={handleNext}
+                    className={style["carousel-button"]}
+                    disabled={isNextDisabled}
+                >
                     &gt; {/* Right arrow */}
                 </button>
             </div>

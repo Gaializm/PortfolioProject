@@ -1,0 +1,17 @@
+.footer {
+    background: var(--button-background-color); /* Dark indigo background */
+    width: 100% auto;
+    color: var(--button-text-color); /* Light text color */
+    padding: 1rem; /* Add some padding */
+    margin: 0px;
+    display: flex;
+    flex-direction: column; /* Stack name and nav vertically */
+    align-items: flex-start; /* Align items to the left */
+}
+
+.footer nav {
+    
+    display: flex;
+    gap: 1.5rem; /* Equal spacing between links */
+    margin-left: 2rem; /* Push nav to the right */
+}

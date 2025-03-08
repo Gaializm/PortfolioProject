@@ -1,6 +1,6 @@
 import style from '../Styles/Testimonials.module.css';
 
-const Quote = ({ icon, name, testimonial }) => {
+const Quote = ({ icon, name, text }) => {
     return (
         <div className={style["quote-cards"]}>
             <div className={style["quote-card_image"]}>
@@ -8,7 +8,7 @@ const Quote = ({ icon, name, testimonial }) => {
             </div>
             <div className={style["quote-card_content"]}>
                 <h2>{name}</h2>
-                <p>{testimonial}</p>
+                <p>{text}</p>
             </div>
         </div>
     );

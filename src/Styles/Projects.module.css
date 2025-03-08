@@ -10,6 +10,7 @@
     margin: 1rem;
     display: flex;
     flex-direction: row;
+    align-items: center; /* Vertically center the content */
 }
 
     .project-cards:hover {
@@ -18,25 +19,41 @@
     }
 
 /* Project Card Image */
-.project-card_image img {
-    width: 100%;
-    height: 400px; /* Fixed height for consistency */
-    align-content: end;
-    object-fit: cover; /* Ensures the image covers the area */
+.project-card_image {
+    width: 300px; /* Fixed width for the image container */
+    height: 300px; /* Fixed height for the image container (square) */
+    flex-shrink: 0; /* Prevent the image from shrinking */
+    overflow: hidden; /* Ensure the image stays within the square */
 }
+
+    .project-card_image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures the image covers the area */
+    }
 
 /* Project Card Content */
-.project-card_content h2 {
-    font-family: var(--font-family);
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--text-color);
-    margin-bottom: 0.5rem;
+.project-card_content {
+    flex: 1; /* Take up remaining space */
+    padding: 1.5rem; /* Add padding for spacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the text */
+    align-items: flex-start; /* Align text to the left */
 }
 
-.project-card_content p {
-    font-family: var(--font-family);
-    font-size: 1rem;
-    color: var(--text-color);
-    opacity: 0.8;
-}
+    .project-card_content h2 {
+        font-family: var(--font-family);
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--text-color);
+        margin-bottom: 0.5rem;
+    }
+
+    .project-card_content p {
+        font-family: var(--font-family);
+        font-size: 1rem;
+        color: var(--text-color);
+        opacity: 0.8;
+        margin: 0; /* Remove default margin */
+    }

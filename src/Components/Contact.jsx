@@ -1,5 +1,6 @@
 import React from 'react';
-import icon from '../assets/outlined-placeholder-blank.svg';
+import phoneIcon from '../assets/phone.png';
+import emailIcon from '../assets/mail.png';
 import style from '../Styles/ContactSection.module.css'; 
 
 const Contact = () => {
@@ -8,11 +9,11 @@ const Contact = () => {
             <h2>Contact</h2>
             <div className={style["contact-info"]}>
                 <div className={style["contact-item"]}>
-                    <img src={icon} alt="email" />
+                    <img src={emailIcon} alt="email" />
                     <p>Email: <a href={'mailto: placeholder@gmail.com'}>placeholder@gmail.com</a></p>
                 </div>
                 <div className={style["contact-item"]}>
-                    <img src={icon} alt="phone" />
+                    <img src={phoneIcon} alt="phone" />
                     <p>Phone: <a href="tel:123-456-7890">123-456-7890</a></p>
                 </div>
             </div>
