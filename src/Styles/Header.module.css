@@ -2,39 +2,46 @@
 header {
     background: var(--button-background-color); /* Dark indigo background */
     color: var(--button-text-color); /* Light text color */
-    padding: 1rem; /* Add some padding */
-    margin: 0px;
+    width: 100%; /* Full width */
+    padding: 1rem; /* Add padding */
     display: flex;
     flex-direction: column; /* Stack name and nav vertically */
-    align-items: flex-start; /* Align items to the left */
+    align-items: center; /* Center-align content */
+    box-sizing: border-box; /* Include padding in width calculation */
 }
 
-/* Name (h1) */
-header h1 {
-    color: #e8f8faff;
-    font-family: var(--font-family);
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin: 0; /* Remove default margin */
-}
-
-/* Navigation Links */
-header nav {
-    margin-top: 0.5rem; /* Space between name and nav */
-    display: flex;
-    gap: 1.5rem; /* Equal spacing between links */
-    margin-left: 2rem; /* Push nav to the right */
-}
-
-header nav a {
-    color: var(--link-color); /* Light blue for links */
-    text-decoration: none; /* Remove underline */
-    font-family: var(--font-family);
-    font-size: 1rem;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-    header nav a:hover {
-        color: var(--link-hover-color); /* Lilac on hover*/
+    /* Name (h1) */
+    header h1 {
+        color: #e8f8faff;
+        font-family: var(--font-family);
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 0; /* Remove default margin */
     }
+
+    /* Navigation Links */
+    header nav {
+        margin-top: 0.5rem; /* Space between name and nav */
+        display: flex;
+        gap: 1.5rem; /* Equal spacing between links */
+    }
+
+        header nav a {
+            color: var(--link-color); /* Light blue for links */
+            text-decoration: none; /* Remove underline */
+            font-family: var(--font-family);
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+            header nav a:hover {
+                color: var(--link-hover-color); /* Lilac on hover */
+            }
+
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column; /* Stack nav links vertically on smaller screens */
+        gap: 0.5rem; /* Reduce gap between links */
+    }
+}

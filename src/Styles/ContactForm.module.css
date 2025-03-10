@@ -2,48 +2,41 @@
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Increased spacing between form fields */
-    width: 100%;
-    max-width: 350px; /* Adjusted width */
-    margin: 0 auto; /* Center the form horizontally */
-    padding-top: 40px; /* Added padding to avoid overlap with close button */
+    gap: 15px; /* Reduced gap for smaller screens */
+    width: 100%; /* Full width */
+    max-width: 350px; /* Limit maximum width */
+    margin: 0 auto; /* Center the form */
+    padding: 1rem; /* Add padding */
+    box-sizing: border-box; /* Include padding in width calculation */
 }
 
     /* Form Fields */
     .contact-form input,
     .contact-form textarea {
-        width: 100%;
-        padding: 12px; /* Increased padding */
+        width: 100%; /* Full width */
+        padding: 10px; /* Adjusted padding */
         border: 1px solid #ccc;
         border-radius: 5px;
         font-size: 16px;
-        box-sizing: border-box; /* Ensure padding doesn't affect width */
+        box-sizing: border-box; /* Include padding in width calculation */
     }
 
     .contact-form textarea {
         resize: vertical; /* Allow vertical resizing */
-        min-height: 120px; /* Increased minimum height */
-    }
-
-    /* Character Count */
-    .contact-form p {
-        font-size: 14px;
-        color: #666;
-        text-align: right;
-        margin: 5px 0 0;
+        min-height: 150px; /* Adjusted minimum height */
     }
 
     /* Submit Button */
     .contact-form button {
-        width: 100%;
-        padding: 12px; /* Increased padding */
+        width: 100%; /* Full width */
+        padding: 10px; /* Adjusted padding */
         background-color: #007bff;
         color: white;
         border: none;
         border-radius: 5px;
         font-size: 16px;
         cursor: pointer;
-        margin-top: 20px; /* Increased space above the button */
+        margin-top: 15px; /* Adjusted space above the button */
     }
 
         .contact-form button:disabled {
@@ -65,3 +58,50 @@
         text-align: center;
         margin-top: 10px;
     }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-form {
+        max-width: 100%; /* Full width for smaller screens */
+        padding: 0.5rem; /* Adjusted padding for smaller screens */
+    }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 8px; /* Adjusted padding */
+            font-size: 14px; /* Adjusted font size */
+        }
+
+        .contact-form textarea {
+            min-height: 120px; /* Adjusted minimum height */
+        }
+
+        .contact-form button {
+            padding: 8px; /* Adjusted padding */
+            font-size: 14px; /* Adjusted font size */
+            margin-top: 10px; /* Adjusted space above the button */
+        }
+}
+
+@media (max-width: 480px) {
+    .contact-form {
+        gap: 10px; /* Further reduced gap for very small screens */
+        padding: 0.5rem; /* Further adjusted padding */
+    }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 6px; /* Further adjusted padding */
+            font-size: 12px; /* Further adjusted font size */
+        }
+
+        .contact-form textarea {
+            min-height: 100px; /* Further adjusted minimum height */
+        }
+
+        .contact-form button {
+            padding: 6px; /* Further adjusted padding */
+            font-size: 12px; /* Further adjusted font size */
+            margin-top: 8px; /* Further adjusted space above the button */
+        }
+}

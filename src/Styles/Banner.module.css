@@ -37,3 +37,9 @@
         color: var(--button-hover-text-color); /* Light text color on hover */
         transform: translateY(-2px); /* Slight lift on hover */
     }
+
+@media (max-width: 768px) {
+    .banner {
+        height: 300px; /* Reduce height for smaller screens */
+    }
+}

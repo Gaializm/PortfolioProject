@@ -1,19 +1,25 @@
-/* Project Card Container */
-.project-cards {
+/* Project Card (Link) */
+.project-card {
+    display: flex; /* Make the Link behave like a flex container */
     background: var(--third-background-color);
+    flex-direction: row; /* Align children horizontally */
+    align-items: center; /* Vertically center children */
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     overflow: hidden; /* Ensures the image stays within the card */
     box-shadow: var(--box-shadow);
     transition: transform 0.2s, box-shadow 0.2s;
-    width: 1200px; /* Wider than skill cards */
-    margin: 1rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center; /* Vertically center the content */
+    gap: 1.5rem; /* Space between image and content */
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Limit maximum width */
+    margin: 1rem 0 1rem 5rem; /* Adjust margins */
+    padding: 1rem; /* Add padding */
+    box-sizing: border-box; /* Include padding in width calculation */
+    text-decoration: none; /* Remove underline from Link */
+    color: inherit; /* Inherit text color */
 }
 
-    .project-cards:hover {
+    .project-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
@@ -57,3 +63,17 @@
         opacity: 0.8;
         margin: 0; /* Remove default margin */
     }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-card {
+        padding: 0.5rem; /* Reduce padding for smaller screens */
+        margin: 1rem 0; /* Adjust margins for smaller screens */
+        flex-direction: column; /* Stack image and content vertically */
+    }
+
+    .project-card_image {
+        width: 100%; /* Full width for smaller screens */
+        height: auto; /* Auto height to maintain aspect ratio */
+    }
+}

@@ -6,7 +6,7 @@ import designPic from '../assets/design.png';
 import planPic from '../assets/planning.png';
 import progPic from '../assets/programming.png';
 import paintPic from '../assets/paintbrush.png';
-import style from '../Styles/Carousel.module.css';
+import Wrapper from "./Wrapper";
 
 const SkillsCarousel = () => {
     const mySkills = [
@@ -43,11 +43,14 @@ const SkillsCarousel = () => {
     ];
 
     return (
-        <Carousel itemWidth={220}> {/* Adjust itemWidth as needed */}
-            {mySkills.map((skill) => (
-                <Skill key={skill.id} icon={skill.icon} name={skill.name} description={skill.description} />
-            ))}
-        </Carousel>
+        <Wrapper>
+            <h2>My Skills</h2>
+            <Carousel itemWidth={220}> {/* Adjust itemWidth as needed */}
+                {mySkills.map((skill) => (
+                    <Skill key={skill.id} icon={skill.icon} name={skill.name} description={skill.description} />
+                ))}
+            </Carousel>
+        </Wrapper>
     );
 };
 

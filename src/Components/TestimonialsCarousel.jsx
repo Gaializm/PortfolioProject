@@ -4,7 +4,7 @@ import Quote from './Quote';
 import sandyPic from '../assets/Sandy.png';
 import bobPic from '../assets/Bob.png';
 import patPic from '../assets/Patrick.png';
-import style from '../Styles/Carousel.module.css';
+import Wrapper from "./Wrapper";
 
 const TestimonialsCarousel = () => {
     const myTestimonials = [
@@ -29,11 +29,14 @@ const TestimonialsCarousel = () => {
     ];
 
     return (
-        <Carousel itemWidth={330}> {/* Adjust itemWidth as needed */}
-            {myTestimonials.map((testimonial, index) => (
-                <Quote key={index} icon={testimonial.icon} text={testimonial.text} name={testimonial.name} />
-            ))}
-        </Carousel>
+        <Wrapper>
+            <h2>Testimonials</h2> 
+            <Carousel itemWidth={330}> {/* Adjust itemWidth as needed */}
+                {myTestimonials.map((testimonial, index) => (
+                    <Quote key={index} icon={testimonial.icon} text={testimonial.text} name={testimonial.name} />
+                ))}
+            </Carousel>
+        </Wrapper>
     );
 };
 

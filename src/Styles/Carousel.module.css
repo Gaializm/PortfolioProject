@@ -9,6 +9,7 @@
     width: 100%;
     overflow: hidden;
     position: relative;
+    align-items: center;
     height: auto; /* Adjust height dynamically */
     min-height: 200px; /* Set a minimum height to prevent cutting off content */
 }

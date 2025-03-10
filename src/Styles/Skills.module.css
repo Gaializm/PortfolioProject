@@ -13,10 +13,10 @@
     margin-bottom: 15px;
 }
 
-.skill-cards:hover {
-        transform: translateY(-2px); /* Lift card on hover */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
- }
+/*.skill-cards:hover {
+        transform: translateY(-2px); /* Lift card on hover 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover 
+ }*/
 
 /* Skill Card Image */
 .skill-card_image img {

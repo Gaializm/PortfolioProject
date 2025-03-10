@@ -45,6 +45,29 @@
         line-height: 1.6; /* Improve readability */
     }
 
+/* View Project Button */
+.project-link {
+    position: relative; /* Adjust as needed */
+    background: var(--button-hover-background-color); /* Dark blue background */
+    color: var(--link-color); /* Light text color */
+    padding: 0.75rem 1.5rem; /* Same padding as .banner-button */
+    border: none;
+    border-radius: var(--border-radius); /* Rounded corners */
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s; /* Smooth transitions */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+}
+
+    .project-link:hover {
+        background: var(--secondary-background-color); /* Lilac background on hover */
+        color: var(--button-hover-text-color); /* Light text color on hover */
+        transform: translateY(-2px); /* Slight lift on hover */
+    }
+
 @media (max-width: 768px) {
     .about {
         flex-direction: column; /* Stack image and content vertically */

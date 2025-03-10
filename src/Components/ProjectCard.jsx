@@ -1,6 +1,6 @@
 import style from '../Styles/Projects.module.css';
 
-const ProjectCard = ({ photo, projectName, description }) => {
+const ProjectCard = ({ id, photo, projectName, description, link }) => {
     return (
         <div className={style["project-cards"]} >
             <div className={style["project-card_image"]} >

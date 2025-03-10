@@ -21,7 +21,7 @@ const Carousel = ({ children, itemWidth }) => {
     const isPrevDisabled = currentIndex === 1;
 
     // Calculate the translateX value to center the active item
-    const translateX = -currentIndex * itemWidth + (window.innerWidth / 2 - itemWidth / 2);
+    const translateX = -currentIndex * itemWidth*1.12 + (window.innerWidth / 2 - itemWidth / 2);
 
     return (
         <div className={style["carousel-wrapper"]}>
