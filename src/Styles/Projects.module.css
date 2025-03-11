@@ -12,13 +12,12 @@
     gap: 1.5rem; /* Space between image and content */
     width: 100%; /* Full width */
     max-width: 1200px; /* Limit maximum width */
-    margin: 1rem 0 1rem 5rem; /* Adjust margins */
     padding: 1rem; /* Add padding */
     box-sizing: border-box; /* Include padding in width calculation */
     text-decoration: none; /* Remove underline from Link */
     color: inherit; /* Inherit text color */
+    margin: 1rem auto; /* Center the card horizontally */
 }
-
     .project-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

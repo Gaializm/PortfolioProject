@@ -1,0 +1,9 @@
+.homeLink {
+    text-align: center; 
+    display:  block;
+    color: #1929b3ff;
+}
+
+.homeLink:hover {
+    color: var(--link-hover-color);
+}
